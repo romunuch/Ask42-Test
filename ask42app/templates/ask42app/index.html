@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+
+
+
+    {% block content %}
+
+		<form action="{% url 'index' %}" method="post">
+			{% csrf_token %}
+
+			<div class="form-group">
+
+
+				{{ formset.management_form }}
+
+				{% for form in formset %}
+					{% for hidden in form.hidden_fields %}
+				        {{ hidden }}
+				    {% endfor %}
+					<div class="form-row mb-2">
+
+						{{ form.element }}
+						<a class="btn btn-success add-form-row my-3"><h4 class="mt-2">+</h4></a>
+								            	
+					</div>
+				{% endfor %}
+			</div>	
+
+			<button class="btn btn-primary" type="submit">Submit</button>
+		</form>
+
+
+    {% endblock %}

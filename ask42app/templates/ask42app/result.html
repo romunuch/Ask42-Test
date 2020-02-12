@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+	{% block content %}
+
+    	{% for element in elements %}
+    		<div class="mb-3">
+    			<div class="row">
+    				<div class="col-lg-3">element id - {{ element.id }}</div>
+    				<div class="col-lg-9">{{ element.some_element }}</div>
+    			</div>
+    		</div>
+    	{% endfor %}
+
+    {% endblock %}

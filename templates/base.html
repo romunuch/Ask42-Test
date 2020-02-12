@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ask42 test</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <h2 class="navbar-brand">Ask42 Testing task</h2>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse ml-5" id="navbarText">
+        <span class="navbar-text">
+          Roman Trus
+        </span>
+      </div>
+  </nav>
+	
+
+  <div class="m-5">
+  	{% block content %}
+  		base
+  	{% endblock %}
+  </div>
+
+  <script src="{% static 'jquery-3.2.1.min.js' %}"></script>
+  <script src="{% static 'formset.js' %}"></script>
+</body>
+</html>
